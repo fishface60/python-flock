@@ -1,13 +1,6 @@
 #!/usr/bin/python
 
-'Library for providing a higher level interface to flock(2)'
-# I need a library that provides both shared and exclusive locks on files.
-#
-# oslo.concurrency and lockfile attempt the highest common factor approach
-# based on atomic file creation, which only provides exclusive locks
-#
-# portalocker is more portable and provides shared and exclusive locks,
-# but doesn't work with directories, and the timeout approach is a busy wait.
+'''Python Library/cli for providing a higher level interface to flock(2)'''
 
 __version__ = '0.0.0'
 

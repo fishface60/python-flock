@@ -1,0 +1,12 @@
+I need a library that provides both shared and exclusive locks on files.
+
+oslo.concurrency and lockfile attempt the highest common factor approach
+based on atomic file creation, which only provides exclusive locks
+
+portalocker is more portable and provides shared and exclusive locks,
+but doesn't work with directories since it requires a file object,
+and python2 doesn't let you have a file object for a directory.
+
+Also its timeout approach is to non-blocking flock in a loop until the
+timeout period is over,
+which is less performant than a proper blocking lock with wakeup.
