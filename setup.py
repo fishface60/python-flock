@@ -20,6 +20,7 @@ import flock
 
 
 setup(name='flock',
+      provides=('flock',),
       description=flock.__doc__,
       packages=('flock',),
       version=flock.__version__,
